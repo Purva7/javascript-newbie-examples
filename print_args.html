@@ -1,0 +1,35 @@
+
+<script>
+"use strict"
+function myConcat(separator) {
+   var result = "", // initialize list
+       i;
+	alert("arg 0 is " + arguments[0]);
+   // iterate through arguments
+   for (i = 1; i < arguments.length; i++) {
+      result += arguments[i] + separator;
+   }
+   return result;
+}
+// returns "red, orange, blue, "
+alert(" concat result1 is " + myConcat(", ", "red", "orange", "blue"));
+
+// returns "elephant; giraffe; lion; cheetah; "
+alert("concat 2 result is " + myConcat("; ", "elephant", "giraffe", "lion", "cheetah") );
+
+// returns "sage. basil. oregano. pepper. parsley. "
+alert(" concat 3 result is " + myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley") );
+
+var a = [
+  "Hydrogen",
+  "Helium",
+  "Lithium",
+  "Beryl­lium"
+];
+
+var a2 = a.map(function(s){ return s.length });
+alert("a2 is " + a2 );
+
+var a3 = a.map( s => s.length );
+alert("a3 is " + a3 );
+</script>
